@@ -25,6 +25,7 @@
             <div>
               <ul>
                   <li class="painel-info">Visualizações: <span class="p-badge">{{veiculo.visualizar}}</span></li>
+                   <li>Url: {{url(veiculo.id)}}</li>
               </ul>
             </div>
 
@@ -150,7 +151,7 @@ export default {
   },
   methods:{
     url(id){
-      return window.location.origin + '/veiculos/' + id;
+      return window.location.origin + '/veiculo/' + id;
     },
 
     voltar(){

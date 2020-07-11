@@ -12,7 +12,7 @@
             <AutoComplete v-model="filter" :suggestions="veiculos"  placeholder="Digite sua pesquisa..." @complete="search($event)" field="nome">
                 <template #item="slotProps">
                   <div>
-                    <a  :href="`/veiculo/${slotProps.item.id}`">{{slotProps.item.nome_comercial}}</a>
+                    <a>{{slotProps.item.nome}} | {{slotProps.item.marca}} | {{slotProps.item.nome_comercial}}</a>
                   </div>
                 </template>
             </AutoComplete>
@@ -36,7 +36,8 @@ export default {
   watch:{
     filter: function(veiculo){
       if(veiculo && veiculo.id){
-         return this.$router.go(`/veiculo/${veiculo.id}`);
+         this.$router.push(`/veiculo/${veiculo.id}`);
+         return this.$router.go();
       }
     }
   },

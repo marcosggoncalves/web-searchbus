@@ -4,7 +4,6 @@
         <ProgressSpinner  style="width:50px;height:50px" animationDuration=".5s"/>
       </center>
       <section class="container" v-else>
-
         <Carousel :value="veiculos" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions" :circular="true" :autoplayInterval="2000">
           <template #header>
             <h2>Veiculos</h2>

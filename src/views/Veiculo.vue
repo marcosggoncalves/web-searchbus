@@ -7,7 +7,7 @@
         <section class="palavras">
             
             <div>
-              <h1>Lançamentos <span class="p-tag">Novos!</span></h1>
+              <h1>Lançamentos <span class="p-tag"  v-tooltip='"Confira os últimos lançamento de ônibus no portal searchbus"'>Novos!</span></h1>
             </div>
 
             <div id="listas">
@@ -24,7 +24,7 @@
 
             <div>
               <ul>
-                  <li class="painel-info">Visualizações: <span class="p-badge">{{veiculo.visualizar}}</span></li>
+                  <li class="painel-info">Visualizações: <span class="p-badge" v-tooltip='"Visualiações nesse veiculo: " + veiculo.visualizar'>{{veiculo.visualizar}}</span></li>
                    <li>Url: {{url(veiculo.id)}}</li>
               </ul>
             </div>

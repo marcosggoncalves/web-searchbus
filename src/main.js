@@ -15,6 +15,9 @@ import Listbox from 'primevue/listbox';
 import VueSocialSharing from 'vue-social-sharing';
 import TabMenu from 'primevue/tabmenu';
 import Galleria from 'primevue/galleria';
+import Tooltip from 'primevue/tooltip';
+
+Vue.directive('tooltip', Tooltip);
 
 Vue.use(VueSocialSharing);
 

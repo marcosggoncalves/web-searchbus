@@ -28,10 +28,10 @@
         <Panel header="Visualizações">
           <section class="row">
             <div>
-              <BarChartASC />
+              <BarChartASC v-tooltip='"4 veiculos mais visualizados no portal searchbus!"' />
             </div>
             <div>
-              <BarChartDESC />
+              <BarChartDESC v-tooltip='"4 veiculos com poucas visualizações no portal searchbus!"' />
             </div>
           </section>
         </Panel>

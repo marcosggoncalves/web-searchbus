@@ -9,9 +9,9 @@
       </div>
         <nav  class="search">
           <div>
-            <AutoComplete v-model="filter" :suggestions="veiculos"  placeholder="Digite sua pesquisa..." @complete="search($event)" field="nome">
+            <AutoComplete  v-model="filter" :suggestions="veiculos"  placeholder="Digite sua pesquisa..." @complete="search($event)" field="nome">
                 <template #item="slotProps">
-                  <div>
+                  <div v-tooltip='"Click para selecionar veiculo!"'>
                     <a>{{slotProps.item.nome}} | {{slotProps.item.marca}} | {{slotProps.item.nome_comercial}}</a>
                   </div>
                 </template>

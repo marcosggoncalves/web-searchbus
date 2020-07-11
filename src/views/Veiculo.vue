@@ -37,7 +37,7 @@
                   <li>
                     <ShareNetwork
                       network="facebook"
-                      url="https://news.vuejs.org/issues/180"
+                      :url="url(veiculo.id)"
                       :title="`Searchbus - ${veiculo.nome_comercial}`"
                       :description="veiculo.descricao"
                       :quote="`Searchbus - ${veiculo.descricao}`"
@@ -50,7 +50,7 @@
                   <li>
                     <ShareNetwork
                       network="whatsApp"
-                      url="https://news.vuejs.org/issues/180"
+                      :url="url(veiculo.id)"
                       :title="`Searchbus - ${veiculo.nome_comercial}`"
                       :description="veiculo.descricao"
                     >
@@ -61,7 +61,7 @@
                   <li>
                     <ShareNetwork
                       network="email"
-                      url="https://news.vuejs.org/issues/180"
+                      :url="url(veiculo.id)"
                       :title="`Searchbus - ${veiculo.nome_comercial}`"
                       :description="veiculo.descricao"
                     >

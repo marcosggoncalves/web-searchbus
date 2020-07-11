@@ -4,6 +4,8 @@ import './registerServiceWorker';
 import router from './router';
 import store from './store';
 
+import 'primeflex/primeflex.css';
+
 import Carousel from 'primevue/carousel';
 import AutoComplete from 'primevue/autocomplete';
 import Panel from 'primevue/panel';
@@ -25,7 +27,7 @@ Vue.component('Listbox', Listbox);
 Vue.component('TabMenu', TabMenu);
 Vue.component('Galleria', Galleria);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true;
 
 new Vue({
     router,

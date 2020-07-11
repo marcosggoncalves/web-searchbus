@@ -8,15 +8,15 @@
           <h1>SearchBus</h1>
       </div>
         <nav  class="search">
-            <div>
-              <AutoComplete v-model="filter" :suggestions="veiculos"  placeholder="Digite sua pesquisa..." @complete="search($event)" field="nome">
-                	<template #item="slotProps">
-                    <div>
-                      <a  :href="`/veiculo/${slotProps.item.id}`">{{slotProps.item.nome_comercial}}</a>
-                    </div>
-                  </template>
-              </AutoComplete>
-            </div>
+          <div>
+            <AutoComplete v-model="filter" :suggestions="veiculos"  placeholder="Digite sua pesquisa..." @complete="search($event)" field="nome">
+                <template #item="slotProps">
+                  <div>
+                    <a  :href="`/veiculo/${slotProps.item.id}`">{{slotProps.item.nome_comercial}}</a>
+                  </div>
+                </template>
+            </AutoComplete>
+          </div>
         </nav>
     </header>  
     <router-view/>
@@ -36,7 +36,7 @@ export default {
   watch:{
     filter: function(veiculo){
       if(veiculo && veiculo.id){
-         return this.$router.push(`/veiculo/${veiculo.id}`);
+         return this.$router.go(`/veiculo/${veiculo.id}`);
       }
     }
   },

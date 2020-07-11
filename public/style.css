@@ -1,0 +1,281 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    text-decoration: none;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #000;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 2px #ededed;
+}
+
+footer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #000;
+    padding: 1.5rem;
+    bottom: 0;
+}
+
+nav {
+    padding: 40px 0px;
+}
+
+.logo img {
+    max-width: 4rem;
+}
+
+.btn-voltar {
+    margin-top: 25px;
+}
+
+.container {
+    padding: 40px 40px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.titulo h1 {
+    color: #fff;
+    font-weight: inherit;
+    font-size: 0.6rem;
+}
+
+input[type=text] {
+    padding: 0.1rem;
+    width: 40vw;
+}
+
+input[type="button"],
+[type="reset"] {
+    background: #212121;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+input,
+button {
+    outline: none;
+}
+
+main {
+    width: 90vw;
+    height: 200vh;
+    margin: auto;
+}
+
+.informaçõesveiculos .info-line {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    text-align: justify;
+}
+
+.informaçõesveiculos h1 {
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #fff;
+}
+
+.sub_açoes ul {
+    display: flex;
+    list-style: none;
+}
+
+.sub_açoes li {
+    padding: 20px 20px;
+    color: #212121;
+    font-size: 0.6rem;
+}
+
+.palavras h1 {
+    text-align: center;
+    line-height: 4rem;
+    font-weight: inherit;
+}
+
+.palavras ul {
+    list-style: none;
+}
+
+.palavras li {
+    border: 1px solid #ddd;
+    padding: 5px 5px;
+}
+
+.palavras a {
+    font-size: 0.9rem;
+}
+
+.mostrar {
+    cursor: pointer;
+}
+
+.mostrar li:hover {
+    background: #ededed;
+    border-left: 4px solid #000;
+    transition: 0.3s;
+}
+
+.active {
+    background: #ededed;
+    border-left: 4px solid #000;
+    transition: 0.3s;
+}
+
+.mostrar div {
+    display: none;
+}
+
+.mostrar a {
+    text-decoration: none;
+    color: #000;
+}
+
+.search input[type="text"] {
+    padding: 5px 5px;
+    width: 80vw;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.row div {
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.painel-info {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.lados {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.lados section {
+    width: 100%;
+}
+
+@media screen and (min-width:720px) {
+    .lados section {
+        width: unset;
+    }
+    .search input[type="text"] {
+        width: 400px;
+    }
+    .row {
+        flex-direction: row;
+    }
+    header,
+    footer {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: #000;
+        padding: 1rem;
+    }
+    footer {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: #000;
+        padding: 2rem;
+    }
+    input[type="button"],
+    [type="reset"] {
+        background: #212121;
+        border: none;
+        padding: 0.5rem 1rem;
+        color: #fff;
+        font-size: 1rem;
+    }
+    input[type=text] {
+        padding: 0.2rem;
+        width: 20vw;
+    }
+    nav {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px 0px;
+    }
+    .lados {
+        display: flex;
+        flex-wrap: unset;
+    }
+    .lados section {
+        margin-right: 20px;
+    }
+    main {
+        width: 90vw;
+        margin: auto;
+        height: 200vh;
+    }
+    .sub_açoes li {
+        padding: 20px 5px;
+        color: #212121;
+        font-size: 1rem;
+    }
+    .informaçõesveiculos h1 {
+        text-align: center;
+        line-height: 4rem;
+        font-size: 1.5rem;
+        margin-bottom: unset;
+    }
+    .informaçõesveiculos .info-line {
+        border: 1px solid #ddd;
+        padding: 15px 20px;
+    }
+    .logo {
+        padding: 0px 10px;
+    }
+    .logo img {
+        max-width: 2.5rem;
+    }
+    .titulo h1 {
+        color: #fff;
+        font-weight: inherit;
+        font-size: 1rem;
+    }
+    .palavras div {
+        width: 20vw;
+    }
+}

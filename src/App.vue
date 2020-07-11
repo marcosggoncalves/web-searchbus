@@ -1,32 +1,69 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <header>
+      <div class="logo">
+        <img alt="SearchBus" src="./assets/logo.png">
+      </div>
+      <div class="titulo">
+          <h1>SearchBus</h1>
+      </div>
+        <nav  class="search">
+            <div>
+              <AutoComplete v-model="filter" :suggestions="veiculos"  placeholder="Digite sua pesquisa..." @complete="search($event)" field="nome">
+                	<template #item="slotProps">
+                    <div>
+                      <a  :href="`/veiculo/${slotProps.item.id}`">{{slotProps.item.nome_comercial}}</a>
+                    </div>
+                  </template>
+              </AutoComplete>
+            </div>
+        </nav>
+    </header>  
     <router-view/>
   </div>
 </template>
 
+<script>
+import axios from './axios.js';
+
+export default {
+  data(){
+    return{
+      veiculos:[],
+      filter: null
+    }
+  },
+  watch:{
+    filter: function(veiculo){
+      if(veiculo && veiculo.id){
+         return this.$router.push(`/veiculo/${veiculo.id}`);
+      }
+    }
+  },
+  methods:{
+    search(event){
+      if(event.query.length <= 0 ) return false;
+
+      axios.get("/vehicles",{
+        params:{
+          "search": event.query
+        }
+      }).then(result=>{
+        this.veiculos = result.data;
+      });
+    }
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  a{
+    text-decoration: none;
+    color: #000;
+    padding: 20px 20px;
+  }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .padding{
+    padding: 20px 20px;;
+  }
 </style>

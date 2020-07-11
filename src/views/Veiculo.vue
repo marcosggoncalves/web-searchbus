@@ -25,7 +25,7 @@
             <div>
               <ul>
                   <li class="painel-info">Visualizações: <span class="p-badge" v-tooltip='"Visualiações nesse veiculo: " + veiculo.visualizar'>{{veiculo.visualizar}}</span></li>
-                   <li>Url: {{url(veiculo.id)}}</li>
+                   <li class="painel-info-link">Url: {{url(veiculo.id)}}</li>
               </ul>
             </div>
 

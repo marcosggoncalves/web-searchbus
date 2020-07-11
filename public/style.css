@@ -63,6 +63,10 @@ input[type="button"],
     font-size: 0.7rem;
 }
 
+li {
+    word-wrap: break-word;
+}
+
 input,
 button {
     outline: none;
@@ -190,6 +194,10 @@ footer p {
 
 .container {
     padding: 10px 10px;
+}
+
+.painel-info-link {
+    cursor: pointer;
 }
 
 @media screen and (min-width:720px) {

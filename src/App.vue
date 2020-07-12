@@ -19,7 +19,9 @@
           </div>
         </nav>
     </header>  
-    <MegaMenu :model="items" />
+    <section class="padding">
+      <MegaMenu :model="items" />
+    </section>
     <Toast position="bottomright"/>
     <router-view/>
   </div>

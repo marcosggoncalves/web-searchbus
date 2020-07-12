@@ -25,6 +25,8 @@ import Dialog from 'primevue/dialog';
 import InputText from 'primevue/inputtext';
 import Textarea from 'primevue/textarea';
 import Toolbar from 'primevue/toolbar';
+import Card from 'primevue/card';
+import Fieldset from 'primevue/fieldset';
 
 
 Vue.use(ToastService);
@@ -33,6 +35,7 @@ Vue.use(VueSocialSharing);
 Vue.directive('tooltip', Tooltip);
 
 Vue.component('Toast', Toast);
+Vue.component('Card', Card);
 Vue.component('Textarea', Textarea);
 Vue.component('InputText', InputText);
 Vue.component('Carousel', Carousel);
@@ -48,6 +51,7 @@ Vue.component('ColumnGroup', ColumnGroup);
 Vue.component('Dialog', Dialog);
 Vue.component('Toolbar', Toolbar);
 Vue.component('MegaMenu', MegaMenu);
+Vue.component('Fieldset', Fieldset);
 
 Vue.config.productionTip = true;
 

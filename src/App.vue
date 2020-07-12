@@ -39,6 +39,9 @@ export default {
         },
         {
           label: 'Veiculos', icon: 'pi pi-clone', url:"/veiculos", visible: this.getUrl("/veiculos")
+        },
+        {
+          label: 'Atualizações', icon: 'pi pi-clone', url:"/atualicacoes", visible: this.getUrl("/atualicacoes")
         } 
       ]  
     }
@@ -63,7 +66,7 @@ export default {
         this.veiculos = result.data;
       }).catch(error=>{
         this.$toast.add(
-          {severity:'error', summary: "Occoreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
+          {severity:'error', summary: "Ocorreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
         );
       });
     },

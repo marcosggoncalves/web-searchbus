@@ -166,7 +166,7 @@ export default {
         this.veiculo = result.data;
       }).catch(error=>{
         this.$toast.add(
-          {severity:'error', summary: "Occoreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
+          {severity:'error', summary: "Ocorreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
         );
       });
 
@@ -178,7 +178,7 @@ export default {
         this.lancamentos = result.data;
       }).catch(error=>{
         this.$toast.add(
-          {severity:'error', summary: "Occoreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
+          {severity:'error', summary: "Ocorreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
         );
       });
     },

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Veiculo from '../views/Veiculo.vue'
+import Veiculos from '../views/Veiculos.vue'
 
 Vue.use(VueRouter)
 
@@ -14,6 +15,16 @@ const routes = [{
         path: '/veiculo/:id',
         name: 'Veiculo',
         component: Veiculo
+    },
+    {
+        path: '*',
+        name: 'found',
+        component: Home
+    },
+    {
+        path: '/veiculos',
+        name: 'Veiculos',
+        component: Veiculos
     }
 ]
 

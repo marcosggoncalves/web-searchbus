@@ -78,8 +78,13 @@ export default {
   },
   methods:{
     getVeiculos(){
-      axios.get("/vehicles/all/12").then(result=>{
+      axios.get("/vehicles/all/8").then(result=>{
         this.veiculos = result.data;
+      }).catch(error=>{
+       
+        this.$toast.add(
+          {severity:'error', summary: "Occoreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
+        );
       });
     }
   },

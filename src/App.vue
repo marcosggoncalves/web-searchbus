@@ -19,6 +19,8 @@
           </div>
         </nav>
     </header>  
+    <MegaMenu :model="items" />
+    <Toast position="bottomright"/>
     <router-view/>
   </div>
 </template>
@@ -30,7 +32,15 @@ export default {
   data(){
     return{
       veiculos:[],
-      filter: null
+      filter: null,
+        items: [
+        {
+          label: 'Home', icon: 'pi pi-home', url:"/", visible:this.getUrl("/")
+        },
+        {
+          label: 'Veiculos', icon: 'pi pi-clone', url:"/veiculos", visible: this.getUrl("/veiculos")
+        } 
+      ]  
     }
   },
   watch:{
@@ -51,9 +61,17 @@ export default {
         }
       }).then(result=>{
         this.veiculos = result.data;
+      }).catch(error=>{
+        this.$toast.add(
+          {severity:'error', summary: "Occoreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
+        );
       });
+    },
+
+    getUrl(label){
+      return this.$router.history.current.path != label;
     }
-  }
+  },
 }
 </script>
 

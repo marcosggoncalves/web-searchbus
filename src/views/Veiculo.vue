@@ -164,6 +164,10 @@ export default {
 
       axios.get(`/vehicles/${id}`).then(result=>{
         this.veiculo = result.data;
+      }).catch(error=>{
+        this.$toast.add(
+          {severity:'error', summary: "Occoreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
+        );
       });
 
       this.getUltimos();
@@ -172,6 +176,10 @@ export default {
     getUltimos(){
       axios.get(`/vehicles/all/4`).then(result=>{
         this.lancamentos = result.data;
+      }).catch(error=>{
+        this.$toast.add(
+          {severity:'error', summary: "Occoreu um erro ao tentar conectar no servidor!", detail: error, life: 3000}
+        );
       });
     },
   

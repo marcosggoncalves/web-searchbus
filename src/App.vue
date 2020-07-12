@@ -19,7 +19,7 @@
           </div>
         </nav>
     </header>  
-    <section class="padding">
+    <section >
       <MegaMenu :model="items" />
     </section>
     <Toast position="bottomright"/>
@@ -40,10 +40,10 @@ export default {
           label: 'Home', icon: 'pi pi-home', url:"/", visible:this.getUrl("/")
         },
         {
-          label: 'Veiculos', icon: 'pi pi-clone', url:"/veiculos", visible: this.getUrl("/veiculos")
+          label: 'Veiculos', icon: 'pi pi-align-justify', url:"/veiculos", visible: this.getUrl("/veiculos")
         },
         {
-          label: 'Atualizações', icon: 'pi pi-clone', url:"/atualicacoes", visible: this.getUrl("/atualicacoes")
+          label: 'Atualizações', icon: 'pi pi-download', url:"/atualicacoes", visible: this.getUrl("/atualicacoes")
         } 
       ]  
     }

@@ -44,7 +44,7 @@
             </template>
         </DataTable>
 
-        <Dialog :visible.sync="openModalDelete"  header="Excluir veiculo no catálogo"  :style="{width: '30vw'}">
+        <Dialog :visible.sync="openModalDelete"  header="Excluir veiculo no catálogo"  :style="{width: '50vw'}">
           <p class="p-m-0">Deseja excluir esse veiculo?</p>
           <template #footer>
             <Button label="Cancelar" icon="pi pi-times" class="p-button-text p-button" @click="deleteModal(null)"/>

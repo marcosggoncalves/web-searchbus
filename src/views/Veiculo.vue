@@ -30,6 +30,15 @@
             </div>
 
             <div>
+              <h1>Compartilhar por email</h1>
+            </div>
+        
+            <div class="p-inputgroup">
+              <InputText placeholder="email para compartilhar veiculo." v-model="email"/>
+              <Button label="Enviar" @click="enviar(veiculo.id)"/>
+            </div>
+
+            <div>
               <h1>Compartilhar</h1>
             </div>
 
@@ -56,17 +65,6 @@
                       :description="veiculo.descricao"
                     >
                         WhatsApp
-                    </ShareNetwork>
-                  </li>
-
-                  <li>
-                    <ShareNetwork
-                      network="email"
-                      :url="url(veiculo.id)"
-                      :title="`Searchbus - ${veiculo.nome_comercial}`"
-                      :description="veiculo.descricao"
-                    >
-                        Email
                     </ShareNetwork>
                   </li>
               </ul>
@@ -131,6 +129,7 @@ export default {
   name: 'Veiculo',
   data() {
     return {
+      email:null,
       veiculo: null,
       lancamentos:[],
       responsiveOptions: [
@@ -150,6 +149,22 @@ export default {
     }
   },
   methods:{
+    enviar(id){
+       axios.post(`/send/${id}`,{
+        email: this.email
+       }).then(result=>{
+        this.$toast.add(
+          {severity:'success', summary: 'Comando executado.', detail: result.data.message, life: 3000}
+        );
+
+        this.email = null;
+      }).catch(error=>{
+        this.$toast.add(
+          {severity:'error', summary: "Não foi possivel enviar email, ocorreu um erro externo!", detail: error, life: 3000}
+        );
+      });
+    },
+
     url(id){
       return window.location.origin + '/veiculo/' + id;
     },

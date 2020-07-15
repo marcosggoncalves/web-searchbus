@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Veiculo from '../views/Veiculo.vue'
 import Veiculos from '../views/Veiculos.vue'
 import Atualicacoes from '../views/Atualicacoes.vue'
+import Comil from '../views/Comil.vue'
 
 Vue.use(VueRouter)
 
@@ -11,6 +12,11 @@ const routes = [{
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+        path: '/comil',
+        name: 'Comil',
+        component: Comil
     },
     {
         path: '/veiculo/:id',

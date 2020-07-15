@@ -44,7 +44,10 @@ export default {
         },
         {
           label: 'Atualizações', icon: 'pi pi-download', url:"/atualicacoes", visible: this.getUrl("/atualicacoes")
-        } 
+        },
+        {
+          label: 'Comil', icon: 'pi pi-filter', url:"/comil", visible: this.getUrl("/comil")
+        }  
       ]  
     }
   },

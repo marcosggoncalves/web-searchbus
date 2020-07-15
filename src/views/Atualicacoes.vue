@@ -39,17 +39,17 @@ export default {
     getCommits(){
       axios.get("https://api.github.com/repos/MLopesG/serachbus-vue/commits").then(result=>{
 
-           result.data.forEach((element,index) => {
+        result.data.forEach((element,index) => {
 
-                this.commits.push(
-                    {
-                        id: element.sha,
-                        author: element.commit.author.email,
-                        date: moment(element.commit.author.date).format('LLLL'),
-                        atualizacao: element.commit.message
-                    }
-                ); 
-           });  
+            this.commits.push(
+                {
+                    id: element.sha,
+                    author: element.commit.author.email,
+                    date: moment(element.commit.author.date).format('LLLL'),
+                    atualizacao: element.commit.message
+                }
+            ); 
+        });  
 
       }).catch(error=>{
         this.$toast.add(

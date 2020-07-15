@@ -151,7 +151,7 @@ export default {
   methods:{
     enviar(id){
        axios.post(`/send/${id}`,{
-        email: this.email
+        "email": this.email
        }).then(result=>{
         this.$toast.add(
           {severity:'success', summary: 'Comando executado.', detail: result.data.message, life: 3000}

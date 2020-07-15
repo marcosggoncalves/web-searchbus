@@ -148,10 +148,15 @@ export default {
        axios.post(`/send/${id}`,{
         "email": this.email
        }).then(result=>{
-        this.$toast.add(
-          {severity:'success', summary: 'Comando executado.', detail: result.data.message, life: 3000}
-        );
-
+        if(result.data.success === "true"){
+          this.$toast.add(
+            {severity:'success', summary: 'Comando executado.', detail: result.data.message, life: 3000}
+          );
+        }else{
+          this.$toast.add(
+            {severity:'warn', summary: 'Comando executado.', detail: result.data.message, life: 3000}
+          );
+        }
         this.email = null;
       }).catch(error=>{
         this.$toast.add(

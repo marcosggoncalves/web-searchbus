@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import Veiculo from '../views/Veiculo.vue'
 import Veiculos from '../views/Veiculos.vue'
 import Atualicacoes from '../views/Atualicacoes.vue'
-import Comil from '../views/Comil.vue'
+import Noticias from '../views/Noticias.vue'
 
 Vue.use(VueRouter)
 
@@ -14,9 +14,9 @@ const routes = [{
         component: Home
     },
     {
-        path: '/comil',
-        name: 'Comil',
-        component: Comil
+        path: '/noticias',
+        name: 'Noticias',
+        component: Noticias
     },
     {
         path: '/veiculo/:id',

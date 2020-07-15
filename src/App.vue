@@ -43,11 +43,11 @@ export default {
           label: 'Veiculos', icon: 'pi pi-align-justify', url:"/veiculos", visible: this.getUrl("/veiculos")
         },
         {
-          label: 'Atualizações', icon: 'pi pi-download', url:"/atualicacoes", visible: this.getUrl("/atualicacoes")
-        },
+          label: 'Noticias', icon: 'pi pi-globe', url:"/noticias", visible: this.getUrl("/noticias")
+        }, 
         {
-          label: 'Comil', icon: 'pi pi-filter', url:"/comil", visible: this.getUrl("/comil")
-        }  
+          label: 'Atualizações', icon: 'pi pi-download', url:"/atualicacoes", visible: this.getUrl("/atualicacoes")
+        } 
       ]  
     }
   },

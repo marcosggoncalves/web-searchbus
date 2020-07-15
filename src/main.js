@@ -27,7 +27,7 @@ import Textarea from 'primevue/textarea';
 import Toolbar from 'primevue/toolbar';
 import Card from 'primevue/card';
 import Fieldset from 'primevue/fieldset';
-
+import TabMenu from 'primevue/tabmenu';
 
 Vue.use(ToastService);
 Vue.use(VueSocialSharing);
@@ -36,6 +36,7 @@ Vue.directive('tooltip', Tooltip);
 
 Vue.component('Toast', Toast);
 Vue.component('Card', Card);
+Vue.component('TabMenu', TabMenu);
 Vue.component('Textarea', Textarea);
 Vue.component('InputText', InputText);
 Vue.component('Carousel', Carousel);

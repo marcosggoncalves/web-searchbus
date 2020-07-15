@@ -20,7 +20,7 @@
         </nav>
     </header>  
     <section >
-      <MegaMenu :model="items" />
+      <TabMenu :model="items" />
     </section>
     <Toast position="bottomright"/>
     <router-view/>
@@ -37,7 +37,7 @@ export default {
       filter: null,
         items: [
         {
-          label: 'Home', icon: 'pi pi-home', url:"/", visible:this.getUrl("/")
+          label: 'Home', icon: 'pi pi-home', url:"/", visible:this.getUrl("/"), 
         },
         {
           label: 'Veiculos', icon: 'pi pi-align-justify', url:"/veiculos", visible: this.getUrl("/veiculos")

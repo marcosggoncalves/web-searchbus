@@ -11,7 +11,7 @@
         <template slot="content" >
           
           <Fieldset class="margin" v-for="commit in commits" :key="commit.id" :legend="`Atualizado por ${commit.author} (${commit.date})`">
-            <p class="padding">{{commit.atualizacao}} <a :href="`https://github.com/MLopesG/serachbus-vue/commit/${commit.id}`">Ver Atualização</a></p>
+            <p class="padding">{{commit.atualizacao}}</p>
           </Fieldset>
             
         </template>
@@ -61,7 +61,7 @@ export default {
   mounted(){
     this.getCommits();
   }
-}
+}         
 </script>
 
 <style scoped>

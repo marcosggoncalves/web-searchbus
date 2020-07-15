@@ -24,22 +24,17 @@
 
             <div>
               <ul>
-                  <li class="painel-info">Visualizações: <span class="p-badge" v-tooltip='"Visualiações nesse veiculo: " + veiculo.visualizar'>{{veiculo.visualizar}}</span></li>
-                   <li class="painel-info-link">Url: {{url(veiculo.id)}}</li>
+                  <li class="painel-info">Visualizações: <span class="p-badge" v-tooltip='"Visualizações nesse veiculo: " + veiculo.visualizar'>{{veiculo.visualizar}}</span></li>
               </ul>
             </div>
 
             <div>
-              <h1>Compartilhar por email</h1>
+              <h1>Compartilhar</h1>
             </div>
         
             <div class="p-inputgroup">
-              <InputText placeholder="email para compartilhar veiculo." v-model="email"/>
+              <InputText placeholder="Email de compartilhamento..." v-model="email"/>
               <Button label="Enviar" @click="enviar(veiculo.id)"/>
-            </div>
-
-            <div>
-              <h1>Compartilhar</h1>
             </div>
 
             <div>

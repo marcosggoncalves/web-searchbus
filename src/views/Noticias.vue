@@ -5,11 +5,11 @@
         </center>
         <section class="container" v-else>
             <div class="titulo-noticia">
-                <h1>últimos noticias - {{atualizado}} </h1>
+                <h1>Noticias - {{atualizado}}</h1>
             </div>
             <div>
                 <div class="p-grid">
-                    <div class="p-col-3" v-for="(noticia,index) in lancamentos" :key="index" >
+                    <div class="p-col-12 p-md-6 p-lg-3" v-for="(noticia,index) in lancamentos" :key="index" >
                         <Card class="tamanho">
                             <template slot="header">
                                 <img alt="user header" :src="noticia.imagem">
@@ -70,11 +70,12 @@ export default {
 <style  scoped>
     .tamanho{
         width:100%;
+        height: 100%;
     }
 
     .titulo-noticia{
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
     .titulo-noticia h1{

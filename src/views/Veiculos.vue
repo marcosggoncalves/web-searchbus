@@ -4,9 +4,6 @@
         <ProgressSpinner  style="width:50px;height:50px" animationDuration=".5s"/>
       </center>
       <section class="container" v-else>
-        <div>
-          <h2>Veiculos Catálogados</h2>
-        </div>
          <Toolbar class="p-mb-4">
             <template slot="left">
                 <Button @click="editModal(veiculo())" label="Novo Veiculo" icon="pi pi-plus" class="p-button p-mr-2" />

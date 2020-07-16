@@ -15,7 +15,7 @@
                                 <img alt="user header" :src="noticia.imagem">
                             </template>
                             <template slot="title" v-if="noticia && noticia.data">
-                                <span><b>ANTT</b> {{noticia.data}}</span>
+                                <span>{{noticia.data}}</span>
                             </template>
                             <template slot="content">
                                 {{noticia.titulo}}
@@ -45,11 +45,11 @@ export default {
     methods:{
         getNoticias(){
             axios.all([
-                axios.get("https://raspagem-web.herokuapp.com/comil"),
+                axios.get("https://raspagem-web.herokuapp.com/revista"),
                 axios.get("https://raspagem-web.herokuapp.com/antt")
             ]).then((...results)=>{
                 this.lancamentos = results[0][0].data.data.noticias;
-                this.atualizado = results[0][0].data.data.atualizado;
+                this.atualizado = results[0][0].data.atualizado;
                 this.lancamentos = this.lancamentos.concat(results[0][1].data.data.noticias);
             }).catch(error=>{
                 this.$toast.add(

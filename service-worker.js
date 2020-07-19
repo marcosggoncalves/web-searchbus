@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.8576af5f2879e2e705170f0e0a1a6f3e.js"
+  "/precache-manifest.83663316e4e838c9ceeadb201277c9f4.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "searchbus"});

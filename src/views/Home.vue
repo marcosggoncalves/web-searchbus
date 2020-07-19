@@ -111,7 +111,7 @@ export default {
 
   .veiculo-image {
       width: 80%;
-      height:200px;
+      max-height: 25rem;
   }
   
 </style>

@@ -1,15 +1,12 @@
 <template>
     <div>
-      <center v-if="veiculos.length <= 0">
-        <ProgressSpinner  style="width:50px;height:50px" animationDuration=".5s"/>
-      </center>
-      <section class="container" v-else>
+      <section class="container" >
          <Toolbar class="p-mb-4">
             <template slot="left">
                 <Button @click="editModal(veiculo())" label="Novo Veiculo" icon="pi pi-plus" class="p-button p-mr-2" />
             </template>
         </Toolbar>
-        <DataTable :value="veiculos"  :paginator="true" :rows="15" >
+        <DataTable :lazy="true"  :loading="veiculos.length <= 0" :value="veiculos"  :paginator="true" :rows="15" >
             <Column field="nome_comercial" header="Nome Comercial" >
                 <template #body="slotProps">
                     {{slotProps.data.nome_comercial}}

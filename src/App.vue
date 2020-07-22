@@ -22,7 +22,7 @@
     <section >
       <TabMenu :model="items" />
     </section>
-    <Toast position="bottomright"/>
+    <Toast position="bottom-right"/>
     <router-view/>
   </div>
 </template>

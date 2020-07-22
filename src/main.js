@@ -16,8 +16,6 @@ import VueSocialSharing from 'vue-social-sharing';
 import MegaMenu from 'primevue/megamenu';
 import Galleria from 'primevue/galleria';
 import Tooltip from 'primevue/tooltip';
-import ToastService from 'primevue/toastservice';
-import Toast from 'primevue/toast';
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import ColumnGroup from 'primevue/columngroup';
@@ -28,6 +26,9 @@ import Toolbar from 'primevue/toolbar';
 import Card from 'primevue/card';
 import Fieldset from 'primevue/fieldset';
 import TabMenu from 'primevue/tabmenu';
+
+import ToastService from 'primevue/toastservice';
+import Toast from 'primevue/toast';
 
 Vue.use(ToastService);
 Vue.use(VueSocialSharing);

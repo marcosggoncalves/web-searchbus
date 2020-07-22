@@ -148,7 +148,7 @@ export default {
        axios.post(`/send/${id}`,{
         "email": this.email
        }).then(result=>{
-        if(result.data.success === "true"){
+        if(result.data.status === "true"){
           this.$toast.add(
             {severity:'success', summary: 'Comando executado.', detail: result.data.message, life: 3000}
           );
